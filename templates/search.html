@@ -1,0 +1,50 @@
+{% from "showlinks.html" import show_links  %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'search.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body onload="Loaad()">
+    <div id="loading"></div>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Search</h2>
+            </div>
+            <div class="menu">
+                {{show_links() }}
+            </div>
+            <br><br><br><br>
+              
+            
+            
+
+         
+        </div>
+        <div class="content">
+           
+<form action="\results" method="post">
+  <input type="search" placeholder="Search here ..." name="search">
+  <i class="fa fa-search"></i>
+</form>
+        </div>
+    </div>
+    <script>
+        var preloader = document.getElementById('loading');
+        function Loaad(){
+            preloader.style.display = 'none';
+    
+        }
+    
+        
+        
+        
+        </script> 
+</body>
+</html>

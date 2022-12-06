@@ -1,0 +1,126 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requirements </title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'search.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<style>   .nav_bar{
+    height: 45px;
+    width: 100%;
+    overflow: hidden;
+    background-color: blueviolet;
+    float: left;
+    position: relative;
+}
+.nav_bar a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    padding-left: 60px;
+}
+.context{
+    font-size: 3vh;
+    color: #f2f2f2;
+}
+.nav_bar a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        .nav_bar a.active{
+            background-color:blueviolet;
+            color: white;
+        }
+        .nav_bar a.active:hover{
+            background-color: #ddd;
+            color: black;
+        
+        }
+        .nav_bar{
+    width: 103.2vw;
+    margin-left: -10vw;
+}
+#lg{
+            float: right;
+        }
+h1{
+    color: red;
+}
+.nav_bar{
+    width: 100.2vw;
+    margin-left: -7vw;
+}
+#lg{
+            float: right;
+        }  
+</style>
+<body onload="Loaad()">
+    <div id="loading"></div>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+         
+                <div class="nav_bar">
+                    <a href="{{url_for('index')}}" class="active">Home</a>
+                    <a href="{{url_for('fir')}}">Register FIR</a>
+                    <a href="{{url_for('contact_normal')}}">Contact</a>
+                    <a href="{{url_for('search_normal')}}">search</a>
+                    <a href="{{url_for('login__signup')}}" id = "lg">Login</a>
+                </div>
+                
+            </div>
+           
+            <br><br>
+              
+            
+            
+
+         
+        </div>
+        <div class="context">
+            <h1><center>Requirements for FIR</center></h1>
+            What is FIR - <br>
+
+            'FIR' which means First Information Report.  The Report first recorded by the police relating to the commission of a cognizable case is the first information report.it is a document of considerable importance comedy object being to show on what materials they investigation commented up and what was the story then told.  The FIR is usually made by the complainant or by someone on his / her behalf.
+                
+                Requirements of FIR /Conditions - <br>
+                <br>
+                
+                The general rule is that ordinarily, the information about the offense committed is to be given to the police station having territorial jurisdiction where the offense has been committed. But this does not mean that it cannot be lodged elsewhere. <br>
+                
+                1. FIR must be given to the officer in charge of the police station. 2. FIR must be related to the commission of the cognizable offense<br>
+                
+                3. FIR must be the earliest report of commission of offense on which investigation starts.<br>
+                
+                4. FIR must be written or Reduced in writing. In case of oral, it must be signed by the informant.<br>
+                
+                5. The information reduced in writing must be read out to the informant and its copy should be given to the informant for free.<br>
+                
+                6. This information must be entered in the book called police station diary or general diary FIR may or may not contain all details and particulars as to the incident. It is sufficient if it indicates commission of crime.<br>
+     
+            </div>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        var preloader = document.getElementById('loading');
+        function Loaad(){
+            preloader.style.display = 'none';
+    
+        }
+    
+        
+        
+        
+        </script> 
+</body>
+</html>

@@ -1,0 +1,176 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FIR Form</title>
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <style>   .nav_bar{
+      height: 45px;
+      width: 100%;
+      overflow: hidden;
+      background-color: blueviolet;
+      float: left;
+      position: relative;
+    }
+    .nav_bar a{
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      padding-left: 60px;
+    }
+    
+    .nav_bar a:hover{
+                background-color: #ddd;
+                color: black;
+            }
+            .nav_bar a.active{
+                background-color:blueviolet;
+                color: white;
+            }
+            .nav_bar a.active:hover{
+                background-color: #ddd;
+                color: black;
+            
+            }
+    
+            .act{
+         background-color: aqua;
+       }   
+    </style>
+    <style>
+        
+        .mainform{
+        margin: 50px 230px 50px 230px;
+        padding: 2rem;
+        border: 1px solid rgb(224,224,224) ;
+        border-radius: 15px;
+        box-shadow: 10px 7px 0 rgb(224,224,224);
+        background-color: white;
+        display: flex;
+        }
+    
+        .header{
+            font-size: 17px;
+            font-family: candara;
+            display: flex-end;
+        }
+    
+        input[type=text], select, textarea {
+        display: flex;
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    
+    @media screen and (max-width: 680px) {
+      .header, .mainform, input[type=submit] {
+        margin: 0px 0px 0px 0px;
+        
+      }
+    }
+    #ok{
+        color: red;
+    }
+    .nav_bar{
+        width: 99vw;
+       
+    }
+    #lg{
+                float: right;
+            }
+    
+    
+    </style>
+    
+    <body style="background:  linear-gradient(to top left, #ffffff 0%, #66ccff 100%);">
+        <div class="icon">
+                        
+                        <div class="nav_bar">
+                          <a href="{{url_for('index')}}" class="active">Home</a>
+                          <a href="{{url_for('fir')}}" class="act">Register FIR</a>
+                          <a href="{{url_for('contact_normal')}}">Contact</a>
+                          <a href="{{url_for('search_normal')}}" >search</a>
+                          <a href="{{url_for('login__signup')}}" id = "lg">Login</a>
+                      </div>
+                    </div>
+                    <br>
+        <div class= "mainform">
+        <form action="/fir_record" method="post">
+    
+    
+        <!--Header-->
+        <h3 id="ok">NOTE:- You can only file FIR for Harrasment only for other you have to visit the nearest Police Station </h3>
+        <div class = "header">
+        <h1><b><center>FIR Form</center></b></h1>
+            <p>Please send us details about the incident you would like to report. Our Complaint Center will analyze your complaint and take the appropriate measures 
+              in order that the reported situation will not occur at any other time in the future.</p>
+              <hr/>
+        </div>
+        
+        <h2 style="color: green;"><center>Sucessfully Register</center></h2>
+        <br>
+        <!-- Name-->
+    
+        <div class="form-group">
+            <label for="fname"><b>Victim Name:</b></label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name or give a dubmy name" name="name">
+          </div>
+    
+         <br>
+    
+          <div class="form-group">
+            <label for="cname"><b> Criminal Name:</b></label> 
+            <input type="text" class="form-control" id="cname" placeholder="Enter name if not known write Unknown" name="cname">
+          </div>
+       
+          <br>
+    
+        <!-- Phone number-->
+        
+        <div class="form-group">
+            
+        
+         
+        <!-- Select your area-->
+    
+        <div class="form-group">
+            <label for="area"><b> Area</b></label> 
+            <input type="text" class="form-control" id="area" placeholder="Enter place where incident take place" name="area">
+          </div>
+         
+        
+        <!-- Category of complaint-->
+        
+        
+    
+        <br>
+        <!-- Complaint Details-->
+    
+        <label for="subject"><b>Incident Details:</b></label>
+        <textarea id="subject" name="subject" placeholder="Enter your complaint details......." style="height:200px"></textarea>
+        <label for="subject2"><b>Criminal Details:</b></label>
+        <textarea name="subject2" id="subject2"  placeholder="Enter your criminal details....... How he look where he live" style="height:200px"></textarea>
+    
+        <!--Submit Button-->
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+        
+    
+        </form>
+    </div>
+    
+    </body>
+    
+    </html>

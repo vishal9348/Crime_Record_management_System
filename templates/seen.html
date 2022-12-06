@@ -1,0 +1,149 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seen</title>
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <style>   .nav_bar{
+      height: 45px;
+      width: 100%;
+      overflow: hidden;
+      background-color: blueviolet;
+      float: left;
+      position: relative;
+    }
+    .nav_bar a{
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      padding-left: 60px;
+    }
+    
+    .nav_bar a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        .nav_bar a.active{
+            background-color:blueviolet;
+            color: white;
+        }
+        .nav_bar a.active:hover{
+            background-color: #ddd;
+            color: black;
+        
+        }
+        .nav_bar{
+    width: 103.2vw;
+    margin-left: -10vw;
+}
+#lg{
+            float: right;
+        }
+    </style>
+    <style>
+        
+        .mainform{
+        margin: 50px 230px 50px 230px;
+        padding: 2rem;
+        border: 1px solid rgb(224,224,224) ;
+        border-radius: 15px;
+        box-shadow: 10px 7px 0 rgb(224,224,224);
+        background-color: white;
+        display: flex;
+        }
+    
+        .header{
+            font-size: 17px;
+            font-family: candara;
+            display: flex-end;
+        }
+    
+        input[type=text], select, textarea {
+        display: flex;
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    
+    @media screen and (max-width: 680px) {
+      .header, .mainform, input[type=submit] {
+        margin: 0px 0px 0px 0px;
+        
+      }
+    }
+    #ok{
+        color: red;
+    }
+    
+    
+    </style>
+    
+    <body style="background:  linear-gradient(to top left, #ffffff 0%, #66ccff 100%);">
+        <div class="icon">
+                        
+                        <div class="nav_bar">
+                          <a href="{{url_for('index')}}" class="active">Home</a>
+                          <a href="{{url_for('fir')}}">Register FIR</a>
+                          <a href="{{url_for('contact_normal')}}">Contact</a>
+                          <a href="{{url_for('search_normal')}}">search</a>
+                          <a href="{{url_for('login__signup')}}" id = "lg">Login</a>
+                      </div>
+                    </div>
+        <div class= "mainform">
+        <form action="">
+    
+    
+        <!--Header-->
+        <h3 id="ok">NOTE:- You can only file FIR for Harrasment only for other you have to visit the nearest Police Station </h3>
+        <div class = "header">
+        <h1><b><center>FOUND Missing  Person</center></b></h1>
+            <p>Please send us details about the person you have seen. His/Her family member will contact you shortly
+            .</p>
+              <hr/>
+        </div>
+        
+    
+        <br>
+        <!-- Name-->
+    
+        
+        
+        <br>
+        <div class="form-group">
+            <label for="image"><b> Upload a Pic</b></label> 
+            <input type="file" class="form-control" id="image" placeholder="Upload image of the missing person" name="image">
+          </div>
+        <!--Submit Button-->
+        <label for="details"><b>Person Details:</b></label>
+        <textarea id="details" name="details" placeholder="Enter  person details......." style="height:200px"></textarea>
+
+        <div class="form-group">
+            <label for="area"><b>Seen Location</b></label> 
+            <input type="text" class="form-control" id="area" placeholder="Enter place" name="area">
+        </div>
+        <div class="form-group">
+            <label for="mob"><b>Contact number</b></label> 
+            <input type="number" class="form-control" id="area" placeholder="Enter contact Number"name="area">
+        </div>
+        <button type="button" class="btn btn-outline-primary">Submit</button>
+        
+    
+        </form>
+    </div>
+    
+    </body>
+    
+    </html>

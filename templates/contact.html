@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'contact.css')}}">
+   
+</head>
+<body onload="Loaad()">
+  <div id="loading"></div>
+    <div class="main">
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">Contact</h2>
+                </div>
+                <div class="menu">
+                  <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact</a></li>
+                    <li><a href="{{url_for('design')}}">Received</a></li>
+                    <li><a href="{{url_for('add')}}">Add</a></li>
+                    <li><a href="{{url_for('list')}}">List</a></li>
+                    <li><a href="{{url_for('aboutus')}}">Aboutus</a></li>
+                    <li><a href="{{url_for('login__signup')}}" class="logout">Logout</a></li>
+                   
+                </ul>
+              </div>
+              <br><br><br><br><br>
+              
+              
+
+                <div class="container">
+                    
+                    <div class="row">
+                    
+                      <div class="column">
+                        <form action="https://formsubmit.co/rahulsin1267@gmail.com" method="POST">
+
+                          <label for="Name" style="color: #ff7200;" ><b> Name</b></label>
+                          <input type="text" id="Name" name="Name" placeholder="Your name.." required>
+
+                          <label for="Issue" style="color: #ff7200;"><b> Issue</b></label>
+                          <input type="text" id="Issue" name="Isue" placeholder="Issue" required>
+
+                         
+
+                          <label for="subject" style="color: #ff7200;"><b> Subject</b></label>
+                          <textarea id="subject" required name="subject" placeholder="Write something..                                            also mention your contact details in case we need to contact you" style="height:170px"></textarea>
+                          <input type="submit" value="Submit">
+                        </form>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                  
+    </div>
+    <script>
+      var preloader = document.getElementById('loading');
+      function Loaad(){
+          preloader.style.display = 'none';
+  
+      }
+  
+      let container = document.getElementById('container')
+              
+      toggle = () => {
+          container.classList.toggle('sign-in')
+          container.classList.toggle('sign-up')
+      }
+      
+      setTimeout(() => {
+          container.classList.add('sign-in')
+      }, 200)
+      </script>  
+</body>
+</html>

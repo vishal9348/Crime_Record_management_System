@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guidelines</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'search.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<style>   .nav_bar{
+    height: 45px;
+    width: 100%;
+    overflow: hidden;
+    background-color: blueviolet;
+    float: left;
+    position: relative;
+}
+.nav_bar a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    padding-left: 60px;
+}
+.context{
+    font-size: 3vh;
+    color: #f2f2f2;
+}
+.nav_bar{
+    width: 103.2vw;
+    margin-left: -10vw;
+}
+#lg{
+            float: right;
+        }
+.nav_bar a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        .nav_bar a.active{
+            background-color:blueviolet;
+            color: white;
+        }
+        .nav_bar a.active:hover{
+            background-color: #ddd;
+            color: black;
+        
+        }
+        #head{
+            color: red;
+        }
+      
+</style>
+<body onload="Loaad()">
+    <div id="loading"></div>
+    <div class="main">
+        <div class="navbar">
+            
+         
+                <div class="nav_bar">
+                    <a href="{{url_for('index')}}" class="active">Home</a>
+                    <a href="{{url_for('fir')}}">Register FIR</a>
+                    <a href="{{url_for('contact_normal')}}">Contact</a>
+                    <a href="{{url_for('search_normal')}}">search</a>
+                    <a href="{{url_for('login__signup')}}" id = "lg">Login</a>
+                </div>
+                
+      
+           
+            <br><br>
+              
+            
+            
+
+         
+        </div>
+        <div class="context">
+            <h1 id="head"><center>Guideliness</center></h1><br>
+
+            A Constitution Bench of the Supreme Court in Lalita Kumari v. Govt. of U.P [W.P.(Crl) No; 68/2008]
+held that registration of First Information Report is mandatory under Section 154 of the Code of Criminal
+Procedure , if the information discloses commission of a cognizable offence and no preliminary inquiry is
+permissible in such a situation. If the information received does not disclose a cognizable offence but
+indicates the necessity for an inquiry, a preliminary inquiry may be conducted only to ascertain whether
+cognizable offence is disclosed or not. The Supreme Court issued the following Guidelines regarding the
+registration of FIR. <br>(i) Registration of FIR is mandatory under Section 154 of the Code, if the information discloses
+commission of a cognizable offence and no preliminary inquiry is permissible in such a situation. <br>(ii) If the information received does not disclose a cognizable offence but indicates the necessity for an
+inquiry, a preliminary inquiry may be conducted only to ascertain whether cognizable offence is
+disclosed or not. <br>
+ (iii) If the inquiry discloses the commission of a cognizable offence, the FIR must be registered. In
+cases where preliminary inquiry ends in closing the complaint, a copy of the entry of such closure must be
+supplied to the first informant forthwith and not later than one week. It must disclose reasons in brief for
+closing the complaint and not proceeding further. <br>(iv) The police officer cannot avoid his duty of registering offence if cognizable offence is disclosed.
+Action must be taken against erring officers who donot register the FIR if information received by him
+discloses a cognizable offence. <br>(v) The scope of preliminary inquiry is not to verify the veracity or otherwise of the information
+received but only to ascertain whether the information reveals any cognizable offence. <br>(vi) As to what type and in which cases preliminary inquiry is to be conducted will depend on the
+facts and circumstances of each case. The category of cases in which preliminary inquiry may be made
+are as under: <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;(a) Matrimonial disputes/ family disputes<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(b)Commercial offences<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(c) Medical negligence cases<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(d)Corruption cases<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(e) Cases where there is abnormal delay/laches in initiating criminal prosecution, for example, over3
+months delay in reporting the matter without satisfactorily explaining the reasons for delay. The aforesaid
+are only illustrations and not exhaustive of all conditions which may warrant preliminary inquiry. <br>(vii) While ensuring and protecting the rights of the accused and the complainant, a preliminary
+inquiry should be made time bound and in any case it should not exceed 7 days. The fact of such
+delay and the causes of it must be reflected in the General Diary entry. <br>
+(viii) Since the General Diary/Station Diary/Daily Diary is the record of all information received in a
+police station, we direct that all information relating to cognizable offences, whether resulting in
+registration of FIR or leading to an inquiry, must be mandatorily and meticulously reflected in the said
+Diary and the decision to conduct a preliminary inquiry must also be reflected, as mentioned above. <br>
+        
+            </div>
+        </div>
+    </div>
+    <script>
+        var preloader = document.getElementById('loading');
+        function Loaad(){
+            preloader.style.display = 'none';
+    
+        }
+    
+        
+        
+        
+        </script> 
+</body>
+</html>

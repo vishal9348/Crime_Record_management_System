@@ -1,0 +1,89 @@
+{% from "showlinks.html" import show_links  %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Criminal Mangement System</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'list.css')}}">
+
+
+</head>
+<body onload="Loaad()">
+    <div id="loading"></div>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">LIST</h2>
+            </div>
+            <div class="menu">
+              {{ show_links() }}
+            </div>
+            <br><br><br><br>
+              
+           
+            <br>
+            <br>
+            <br>
+            <br>
+            
+        <div class="container">
+            
+            
+                
+
+        
+
+            <table class="table" cellspacing = "5px" cellpadding = "10px">
+            <thead>
+              <tr>
+             
+                <th class="ok">Name</th>
+                <th>Criminal_name</th>
+                <th class="ok">Area</th>
+                <th>Crime details</th>
+                <th>Criminal details</th>
+                
+             
+               
+                
+               
+              </tr>
+            </thead>
+            <tbody>
+                {% for row in fir_record %}
+              <tr>
+                <td>{{ row.0 }}</td>
+                <td class="ok">{{ row.1 }}</td>
+                <td>{{ row.2 }}</td>
+                <td>{{ row.3 }}</td>
+                <td>  {{ row.4 }} </td>
+                
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+        </div>
+<!-- Modal -->
+
+    <script>
+        var preloader = document.getElementById('loading');
+        function Loaad(){
+            preloader.style.display = 'none';
+    
+        }
+    
+        let container = document.getElementById('container')
+                
+        toggle = () => {
+            container.classList.toggle('sign-in')
+            container.classList.toggle('sign-up')
+        }
+        
+        setTimeout(() => {
+            container.classList.add('sign-in')
+        }, 200)
+        </script> 
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What to </title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'search.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<style>   .nav_bar{
+    height: 45px;
+    width: 100%;
+    overflow: hidden;
+    background-color: blueviolet;
+    float: left;
+    position: relative;
+}
+.nav_bar a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    padding-left: 60px;
+}
+.context{
+    font-size: 3vh;
+    color: #f2f2f2;
+}
+.nav_bar a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        .nav_bar a.active{
+            background-color:blueviolet;
+            color: white;
+        }
+        .nav_bar a.active:hover{
+            background-color: #ddd;
+            color: black;
+        
+        }
+h3{
+    color: red;
+}
+.nav_bar{
+    width: 100.2vw;
+    margin-left: -7vw;
+}
+#lg{
+            float: right;
+        }  
+</style>
+<body onload="Loaad()">
+    <div id="loading"></div>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+         
+                <div class="nav_bar">
+                    <a href="{{url_for('index')}}" class="active">Home</a>
+                    <a href="{{url_for('fir')}}">Register FIR</a>
+                    <a href="{{url_for('contact_normal')}}">Contact</a>
+                    <a href="{{url_for('search_normal')}}">search</a>
+                    <a href="{{url_for('login__signup')}}" id = "lg">Login</a>
+                </div>
+                
+            </div>
+           
+            <br><br>
+              
+            <h1 style="color: purple; font-size: 3vw ;font-weight: bold;"><center>What to Do...</center></h1>
+            
+            <br>
+         
+        </div>
+        <div class="context">
+            <h3>Rules to be followed first</h3>
+            1.Never indulge in a fight with a police officer, despite being the fact that you know that the police officer is wrong, Just be Calm, Polite and Humble all the time.<br>
+            2.Whenever there is a situation where a victim is needed to go to a Police Station to Complain Against a Police Officer, always take a lawyer with you.<br>
+            3.If there is a need to file a complaint against a Police Officer, over his misconduct, the victim should file it in the commissioner’s office in the city.<br>
+            4.Whenever, A police officer does not file FIR , the victim may send the substance of the information, in writing and by post to the Superintendent of Police concerned, who after getting satisfied that such information discloses the commission of a cognizable offences like Murder, Theft, Robbery, shall either investigate the case himself or he can direct an investigation to be made by any police officer subordinate to him. <br>
+            5.If the complaint filed to the Superintendent of Police still does not result in your favour, the victim can make a visit to the nearest Magistrate and can get his complaint registered. After which, the magistrate will order to the police to register the FIR.<br>
+            6.If a person being the victim of the misconduct because of the omission of a duty of a police personnel, which can be any violation of duty or wilful breach or neglect of any rule or regulation, shall be liable to be punished under section 29 of Indian Police Act,1861 with,<br>
+            7.A penalty up to 3 months’ pay; or<br>
+            8.Imprisonment up to 3 months; or<br>
+            9.Both penalty and imprisonment.<br>
+            10.If a Police Personnel summons you to be present at the police station, always go but with a lawyer.<br>
+            11.A Victim can even make complaints to the Jurisdictional DCP, whenever, a police personnel was impolite to you.<br>
+            12.Never make an argument over a law to a police personnel unless you are a lawyer.<br>
+            <h4>13.If possible try to shot the incident from your smart phone for evidence</h4>
+            <div>
+                <h3> Indian Rules on this</h3>
+                <p>
+                    The Police Complaint Authority was created in 2006, After the SC directed all States to begin a reformation in their Police, After the Judgement in the Prakash Case, The SC of India given the directives for structural reform of the police, by establishing Police Complaints Authorities at the state and District level, with immediate effect. The Decision was to be Primarily due to increment in huge number of Complaints against the police and the lack of Accountability, as well as the intention behind setting up police complaints authorities was to make sure that a local mechanism expert in handling a wide scope of complaints against the police, including the most serious, was readily available to the public at large.
+    
+    Complaints which can be filed with the Police Complaints Authority
+    
+    The Authority shall investigate into accusations of “Serious Misconduct” against the police personnel, as detailed on a complaint received from any of the following:
+    
+    A victim or any person on his/her behalf;
+    The National or the State Human Rights Commission;
+    The police; or
+    Any other source
+    By the word “Serious Misconduct”, it states the coverage of the offences;
+    
+    Death in police custody;
+    Grievous hurt, as defined in section 320 0f the IPC,1860;
+    Rape or attempt to commit rape;
+    Arrest or detention without due process of law;
+    Extortion;
+    land/house grabbing; or
+    Any incident involving serious abuse of the authority.
+                </p>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        var preloader = document.getElementById('loading');
+        function Loaad(){
+            preloader.style.display = 'none';
+    
+        }
+    
+        
+        
+        
+        </script> 
+</body>
+</html>

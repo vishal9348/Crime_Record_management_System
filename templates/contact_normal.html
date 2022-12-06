@@ -1,0 +1,118 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'contact.css')}}">
+   
+</head>
+<style>   .nav_bar{
+    height: 45px;
+    width: 100%;
+    overflow: hidden;
+    background-color: blueviolet;
+    float: left;
+    position: relative;
+}
+.nav_bar a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    padding-left: 60px;
+}
+
+.nav_bar a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        .nav_bar a.active{
+            background-color:blueviolet;
+            color: white;
+        }
+        .nav_bar a.active:hover{
+            background-color: #ddd;
+            color: black;
+        
+        }
+   .act{
+     background-color: aqua;
+   }   
+   .nav_bar{
+    width: 101.2vw;
+    margin-left: -8vw;
+}
+#lg{
+            float: right;
+        }
+</style>
+<body onload="Loaad()">
+  <div id="loading"></div>
+  
+    <div class="main">
+        <div class="main">
+            <div class="navbar">
+                <div class="nav_bar">
+                    <a href="{{url_for('index')}}" >Home</a>
+                    <a href="{{url_for('fir')}}">Register FIR</a>
+                    <a href="{{url_for('contact_normal')}} " class="act">Contact</a>
+                    <a href="{{url_for('search_normal')}}">search</a>
+                    <a href="{{url_for('login__signup')}}" id = "lg">Login</a>
+                </div>
+                
+              </div>
+              
+              
+          
+
+                <div class="container">
+                    
+                    <div class="row">
+                    
+                      <div class="column">
+                        <form action="https://formsubmit.co/rahulsin1267@gmail.com" method="POST">
+
+                          <label for="Name" style="color: #ff7200;" ><b> Name</b></label>
+                          <input type="text" id="Name" name="Name" placeholder="Your name.." required>
+
+                          <label for="Issue" style="color: #ff7200;"><b> Issue</b></label>
+                          <input type="text" id="Issue" name="Isue" placeholder="Issue" required>
+
+                         
+
+                          <label for="subject" style="color: #ff7200;"><b> Subject</b></label>
+                          <textarea id="subject" required name="subject" placeholder="Write something..                                            also mention your contact details in case we need to contact you" style="height:170px"></textarea>
+                          <input type="submit" value="Submit">
+                        </form>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                  
+    </div>
+    <script>
+      var preloader = document.getElementById('loading');
+      function Loaad(){
+          preloader.style.display = 'none';
+  
+      }
+  
+      let container = document.getElementById('container')
+              
+      toggle = () => {
+          container.classList.toggle('sign-in')
+          container.classList.toggle('sign-up')
+      }
+      
+      setTimeout(() => {
+          container.classList.add('sign-in')
+      }, 200)
+      </script>  
+</body>
+</html>

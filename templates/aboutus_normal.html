@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>About us</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'aboutus.css')}}">
+
+
+</head>
+<style>   .nav_bar{
+    height: 45px;
+    width: 100%;
+    overflow: hidden;
+    background-color: blueviolet;
+    float: left;
+    position: relative;
+}
+.nav_bar a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    padding-left: 60px;
+}
+
+.nav_bar a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        .nav_bar a.active{
+            background-color:blueviolet;
+            color: white;
+        }
+        .nav_bar a.active:hover{
+            background-color: #ddd;
+            color: black;
+        
+        }
+        .nav_bar{
+    width: 103.2vw;
+    margin-left: -10vw;
+}
+#lg{
+            float: right;
+        }
+    
+</style>
+<body onload="Loaad()">
+    <div id="loading"></div>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <div class="nav_bar">
+                    <a href="{{url_for('index')}}" class="active">Home</a>
+                    <a href="{{url_for('fir')}}">Register FIR</a>
+                    <a href="{{url_for('contact_normal')}}">Contact</a>
+                    <a href="{{url_for('search_normal')}}">search</a>
+                    <a href="{{url_for('login__signup')}}" id = "lg">Login</a>
+                </div>
+            </div>
+            
+            
+            
+            <br><br><br>
+            <div class="about-section">
+                <h1>About Us Page</h1>
+                <p>Some text about who we are and what we do.</p>
+                <p>Resize the browser window to see that this page is responsive by the way.</p>
+              </div>
+              <br><br>
+              <h2  id = "h" style="text-align:center">Our Team</h2>
+              <div class="row">
+                <div class="column">
+                  <div class="card">
+                    <img src="{{ user1 }}" alt="unable to load" style="width:100%">
+                    <div class="container">
+                      <h2>Anant Bera</h2>
+                      
+                      <p>anantbera7@gmail.com</p>
+                     
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="column">
+                  <div class="card">
+                    <img src="{{ user2 }}" alt="unable to load" style="width:100%">
+                    <div class="container">
+                      <h2>Vishal Kumar Saw</h2>
+                      
+                      <p>vishalraj27599@gmail.com</p>
+                   
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="column">
+                  <div class="card">
+                     <img src="{{ user3 }}" alt="unable to load" style="width:100%">
+                    <div class="container">
+                      <h2>Swasti Ranjan Ojha</h2>
+                      
+                      
+                      <p>swastiranjan64@gmail.com</p>
+                   
+                    </div>
+                  </div>
+                </div>
+              </div>
+           
+              
+
+        </div>
+    </div>
+    <script>
+        var preloader = document.getElementById('loading');
+        function Loaad(){
+            preloader.style.display = 'none';
+    
+        }
+    
+        let container = document.getElementById('container')
+                
+        toggle = () => {
+            container.classList.toggle('sign-in')
+            container.classList.toggle('sign-up')
+        }
+        
+        setTimeout(() => {
+            container.classList.add('sign-in')
+        }, 200)
+        </script> 
+</body>
+</html>

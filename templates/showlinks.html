@@ -1,0 +1,57 @@
+
+{% macro show_links() %}
+
+
+<style>
+    ul{
+         float: left;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+    }
+    .rght{
+        float: right;
+        display: flex;
+        flex-direction: row-reverse;
+        color: #fff;
+      }
+    
+    ul li{
+        list-style: none;
+        margin-left: 62px;
+        margin-top: 27px;
+        font-size: 14px;
+    }
+    
+    
+    ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-family: Arial;
+        font-weight: bold;
+        transition: 0.4s ease-in-out;
+    }
+    
+    ul li a:hover{
+        color: #b413e6;
+    }
+    .logout{
+        float: right;
+        margin-left: 28vw;
+    }
+    </style>
+<ul>
+    <li><a href="{{url_for('home')}}">Home</a></li>
+    <li><a href="{{url_for('contact')}}">Contact</a></li>
+    <li><a href="{{url_for('design')}}">Received</a></li>
+    <li><a href="{{url_for('add')}}">Add</a></li>
+    <li><a href="{{url_for('list')}}">List</a></li>
+    <li><a href="{{url_for('aboutus')}}">Aboutus</a></li>
+    <li><a href="{{url_for('login__signup')}}" class="logout">Logout</a></li>
+    
+</ul>
+
+{% endmacro  %}
+
+
+

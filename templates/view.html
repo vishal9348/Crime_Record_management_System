@@ -1,0 +1,126 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+<body>
+    
+
+<link rel="stylesheet" href="{{url_for('static',filename='view.css')}}">
+<div class="container-xl px-4 mt-4">
+    <!-- Account page navigation-->
+    {% if DATA %}
+    <hr class="mt-0 mb-4">
+    {% for row in DATA %}
+    <div class="row">
+        
+        <div class="col-xl-8">
+            <!-- Account details card-->
+            <div class="card mb-4">
+                
+                <div class="card-body print-container" id="invoice">
+                    <div class="col-xl-4">
+                        <!-- Profile picture card-->
+                        <div class="card mb-4 mb-xl-0">
+                            <div class="card-header">Profile Picture</div>
+                            <div class="card-body text-center">
+                                <!-- Profile picture image-->
+                                <img class="img-account-profile rounded-circle mb-2" id="pic" src="{{ user_img }}" alt="">
+                                <!-- Profile picture help block-->
+                               
+                               
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form>
+                        
+                        <!-- Form Group (username)-->
+
+                        <div class="mb-3">
+                            <label class="small mb-1" for="inputUsername">Name </label>
+                            <label class="form-control" id="inputUsername" ><td>{{ row.1 }}</td></label>
+                        </div>
+                        <!-- Form Row-->
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (first name)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="inputFirstName">Gender</label>
+                                <label class="form-control" id="inputFirstName">{{ row.2 }}</label>
+                            </div>
+                            <!-- Form Group (last name)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="inputLastName">Father's Name</label>
+                                <label class="form-control" id="inputLastName">{{ row.3 }}</label>
+                            </div>
+                        </div>
+                        <!-- Form Row        -->
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (organization name)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="inputOrgName">Address</label>
+                                <label class="form-control" id="inputOrgName" >{{ row.4 }}</label>
+                            </div>
+                            <!-- Form Group (location)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="inputLocation">Crime Type</label>
+                                <label class="form-control" id="inputLocation" >{{ row.5 }}</label>
+                            </div>
+                        </div>
+                        <!-- Form Group (email address)-->
+                        <div class="mb-3">
+                            <label class="small mb-1" for="inputEmailAddress">Crime Details</label>
+                            <label class="form-control" id="inputEmailAddress" >{{ row.6 }}</label>
+                        </div>
+                        <!-- Form Row-->
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (phone number)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="inputPhone">Aadhar number</label>
+                                <label class="form-control" id="inputPhone">{{ row.7 }}</label>
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="inputBirthday">Mobile Number</label>
+                                <label class="form-control" id="inputBirthday" >{{ row.8 }}</label>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="inputBirthday">Date of Crime</label>
+                                <label class="form-control" id="inputBirthday" >{{ row.9 }}</label>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="inputBirthday">Submitted by</label>
+                                <label class="form-control" id="inputBirthday" >{{ row.12 }}</label>
+                            </div>
+                        </div>
+                        <!-- Save changes button-->
+                      
+                    </form>
+                   
+                </div>
+                <div id="editor"></div>
+            </body>
+           
+                <button onclick="window.print()" id="print"> Print</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+
+    
+<script>
+    var doc = new jsPDF();
+    var specialElementHandlers = {
+        '#editor': function (element, renderer) {
+            return true;
+       }
+    };
+ 
+ 
+    $('#download').click(function () {
+        doc.fromHTML($('#invoice').html(), 15, 15, {
+            'width': 700,
+        '   elementHandlers': specialElementHandlers
+        });
+        doc.save('Criminal_details.pdf');
+    });
+</script>

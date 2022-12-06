@@ -1,0 +1,113 @@
+{% from "showlinks.html" import show_links  %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Add</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'add.css')}}">
+
+
+</head>
+<body onload="Loaad()">
+    <div id="loading"></div>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">ADD</h2>
+            </div>
+            
+                <div class="menu">
+                    {{show_links()}}
+                </div>
+                <br><br>
+                <div class="rght">
+       
+                </div>
+              
+    
+ <br><br><br>           <br>
+<div class="content">
+
+  
+    
+    
+  <form action="/uploader" enctype="multipart/form-data" method="post">
+    
+        <label for="Name">Full Name</label><br>
+        
+        <input type="text" name="name" id="name" placeholder="Enter full name" required="required">
+        <br>
+        <br>
+        <label for="">Gender:-</label><br>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="unknown"> Unknown	
+                      
+          <br>  
+        <br>
+        <label for="Fname" required="required">Father's Name</label><br>
+        <input type="text" name="fname"required id="Fname"  placeholder="Enter  Father name">
+      <br>
+      <br>
+        <label for="addr">Address</label><br>
+        <input type="text" name="addr" class="form-control" id="addr" placeholder="1234 Near KGF Kartanaka"><br>
+        <br>
+        <label for="crime">Choose a crime level:</label>
+
+        <select name="crime" id="crime">
+          <option value="Free From Charge">Free From Charge</option>
+          
+          <option value="Involve in court case">Involve in court case</option>
+          <option value="Involve in Dangerous Act">Involve in Dangerous Act</option>
+          <option value="Wanted">Wanted</option>
+        </select>  
+    <br><br> 
+        <label for="cri">Write briefly about the crime</label>
+      <br>
+        <textarea id="cri" name="cri" rows="4" cols="50" placeholder="Write in brief"></textarea><br>
+        <br>
+          <label for="city">City</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" name="city" class="form-control" id="city"required placeholder="Jamshedpur">
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <label for="inputZip">Aadhar no.</label>&nbsp;&nbsp;
+          <input type="text" name="aad" class="form-control" id="aad" placeholder="34000" required> <br>
+        <br>
+        <label for="mob" class="col-2 col-form-label">Telephone</label>&nbsp;
+       
+          <input  name="mob" type="tel"  id="mob">
+        
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="date-input" id="date">FIR date</label>&nbsp;&nbsp;
+        &nbsp;&nbsp;
+          <input class="form-control" name="date" type="date" value="2020-02-01" id="example-date-input">
+        
+        <br>
+        <br>
+        
+          <label class="mr-4">Upload Picture:</label>
+        <input type="file" name="image" required>
+        
+        <br>
+        <br>
+        <label class="mr-4">Upload Aadhar</label>
+        <input type="file" name="aadhar">
+      
+        <br>
+        <button type="submit" id = "smt" onclick="return confirm('Are you sure to add those details')">Submit</button>
+  </form>
+  
+
+</div>
+    
+    <script>
+        var preloader = document.getElementById('loading');
+        function Loaad(){
+            preloader.style.display = 'none';
+    
+        }
+    
+       
+        </script> 
+</body>
+</html>

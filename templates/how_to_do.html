@@ -1,0 +1,107 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to </title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'search.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<style>   .nav_bar{
+    height: 45px;
+    width: 100%;
+    overflow: hidden;
+    background-color: blueviolet;
+    float: left;
+    position: relative;
+}
+.nav_bar a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    padding-left: 60px;
+}
+.context{
+    font-size: 3vh;
+    color: #f2f2f2;
+}
+.nav_bar a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        .nav_bar a.active{
+            background-color:blueviolet;
+            color: white;
+        }
+        .nav_bar a.active:hover{
+            background-color: #ddd;
+            color: black;
+        
+        
+} 
+h1{
+    color: red;
+}
+.nav_bar{
+    width: 100.2vw;
+    margin-left: -7vw;
+}
+#lg{
+            float: right;
+        }  
+</style>
+<body onload="Loaad()">
+    <div id="loading"></div>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+         
+                <div class="nav_bar">
+                    <a href="{{url_for('index')}}" class="active">Home</a>
+                    <a href="{{url_for('fir')}}">Register FIR</a>
+                    <a href="{{url_for('contact_normal')}}">Contact</a>
+                    <a href="{{url_for('search_normal')}}">search</a>
+                    <a href="{{url_for('login__signup')}}" id = "lg">Login</a>
+                </div>
+                
+            </div>
+           
+            <br><br>
+              
+            
+            
+
+         
+        </div>
+        <div class="context">
+            <h1><center>Where Should I report crime</center></h1>
+            <br>
+            1.Local law enforcement: Even if you have been the target of a multijurisdictional cybercrime, your local law enforcement agency (either police department or sheriff’s office) has an obligation to assist you, take a formal report and make referrals to other agencies, when appropriate. Report your situation as soon as you find out about it. Some local agencies have detectives or departments that focus specifically on cybercrime. <br><br>
+            2.The Internet Crime Complaint Center (IC3): IC3 will thoroughly review and evaluate your complaint and refer it to the appropriate federal, state, local or international law enforcement or regulatory agency that has jurisdiction over the matter. IC3 is a partnership between the Federal Bureau of Investigation and the National White Collar Crime Center (funded, in part, by the Department of Justice’s Bureau of Justice Assistance). Complaints may be filed online here. <br><br>
+            3.Federal Trade Commission (FTC): The FTC does not resolve individual consumer complaints but does operate the Consumer Sentinel, a secure online database that is used by civil and criminal law enforcement authorities worldwide to detect patterns of wrong-doing, leading to investigations and prosecutions. File your complaint here. Victims of identity crime may receive additional help through the FTC hotline at 1-877-IDTHEFT (1-877-438-4338); identitytheft.gov provides resources for victims, businesses and law enforcement. <br><br>
+            4.Your local victim services provider: Most communities in the United States have victim advocates ready to help following a crime; these providers offer information, emotional support and advocacy as needed. Find local victims service providers here. <br><br>
+           
+            </div>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        var preloader = document.getElementById('loading');
+        function Loaad(){
+            preloader.style.display = 'none';
+    
+        }
+    
+        
+        
+        
+        </script> 
+</body>
+</html>

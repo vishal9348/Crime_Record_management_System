@@ -1,0 +1,54 @@
+{% from "showlinks.html" import show_links  %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Criminal Mangement System</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'home.css')}}">
+
+
+</head>
+<body onload="Loaad()">
+    <div id="loading"></div>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">HOME</h2>
+            </div>
+            <div class="menu">
+              {{ show_links() }}
+            </div>
+            <br><br><br><br>
+              
+              
+            <div class="content">
+                <h1> Criminal Management<br><span>System</span></h1>
+                <p class="par">Criminal Management System is a system which is helpful in finding out the details of the person wheather he has any criminal record or not It is useful whwn we are offering job to a person and want to know about them<br>we can find about the details by the aadhar number click on the button below</p>
+                <button class="cn"><a  href="{{url_for('search')}}">Search</a></button>
+               
+               
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        var preloader = document.getElementById('loading');
+        function Loaad(){
+            preloader.style.display = 'none';
+    
+        }
+    
+        let container = document.getElementById('container')
+                
+        toggle = () => {
+            container.classList.toggle('sign-in')
+            container.classList.toggle('sign-up')
+        }
+        
+        setTimeout(() => {
+            container.classList.add('sign-in')
+        }, 200)
+        </script>
+</body>
+</html>

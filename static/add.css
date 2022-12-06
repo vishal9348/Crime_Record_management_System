@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+}
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+.logo{
+    color: #b413e6;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+}
+.rght{
+    float: right;
+    display: flex;
+    
+    flex-direction:row-reverse;
+    color: #fff;
+  }
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+     float: left;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+#loading{
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    height: 100vh;
+    background: #e4f0f0 url('https://media1.giphy.com/media/xTk9ZvMnbIiIew7IpW/200w.webp?cid=ecf05e47kj52cxru0ow3skg2kulo83w7j2af098f8899ef3o&rid=200w.webp&ct=g')
+    no-repeat center;
+}
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #b413e6;
+}
+
+
+
+form{
+  height: 100%;
+}
+
+#name,#Fname,#mob,#aad{
+  width: 60%;
+  height: 1.5vw;
+  border: blue
+}
+#mob,#aad,#date{
+  width: 20%;
+  height: 1.4vw;
+  border: blue
+}
+#city{
+  width: 20%;
+  height: 1.4vw;
+  border: blue
+}
+#addr{
+  width: 60%;
+  height: 1.4vw;
+  border: none;
+}
+#cri{
+  height: 12vh;
+  width: 60%;
+  
+ 
+}
+label{
+  font-size: 1.1vw;
+  font-weight: bold;
+  font-size: bold;
+  color: rgb(4, 4, 231);
+}
+
+  .content {  
+    background-color: rgba(231, 200, 141, 0.877);
+    margin-top: -5vh;
+    width: 65vw;
+    height: 95vh;
+    margin-left: 4vw;
+    padding-left: 19vw;
+     
+  }  
+  #smt{
+    border-radius: .5vw;
+    width: 6vw;
+    height: 3vh;
+    margin-left: 20vw;
+    margin-top: 1vw;
+    border: none;
+  }
+  #smt:hover{
+    cursor:pointer;
+    color: white;
+    background-color: rgb(19, 173, 19);
+  }
+
+  

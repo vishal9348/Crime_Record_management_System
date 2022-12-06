@@ -1,0 +1,97 @@
+{% from "showlinks.html" import show_links  %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>About us</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'aboutus.css')}}">
+
+
+</head>
+<body onload="Loaad()">
+    <div id="loading"></div>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">About Us</h2>
+            </div>
+            <div class="menu">
+                {{show_links() }}
+            </div>
+            <br><br><br><br>
+              
+            
+            
+            <div class="about-section">
+                <h1>About Us Page</h1>
+                <p>Some text about who we are and what we do.</p>
+                <p>Resize the browser window to see that this page is responsive by the way.</p>
+              </div>
+              
+              <h2  id = "h" style="text-align:center">Our Team</h2>
+              <div class="row">
+                <div class="column">
+                  <div class="card">
+                    <img src="{{ user1 }}" alt="unable to load" style="width:100%">
+                    <div class="container">
+                      <h2>Anant Bera</h2>
+                     
+                      
+                      <p>anantbera7@gmail.com</p>
+                     
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="column">
+                  <div class="card">
+                    <img src="{{ user2 }}" alt="unable to load" style="width:100%">
+                    <div class="container">
+                      <h2>Vishal Kumar Saw</h2>
+                    
+                     
+                      <p>vishalraj27599@gmail.com</p>
+                   
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="column">
+                  <div class="card">
+                     <img src="{{ user3 }}" alt="unable to load" style="width:100%">
+                    <div class="container">
+                      <h2>Swasti Ranjan Ojha</h2>
+                     
+                      
+                      <p>swastiranjan64@gmail.com</p>
+                   
+                    </div>
+                  </div>
+                </div>
+              </div>
+           
+              
+
+        </div>
+    </div>
+    <script>
+        var preloader = document.getElementById('loading');
+        function Loaad(){
+            preloader.style.display = 'none';
+    
+        }
+    
+        let container = document.getElementById('container')
+                
+        toggle = () => {
+            container.classList.toggle('sign-in')
+            container.classList.toggle('sign-up')
+        }
+        
+        setTimeout(() => {
+            container.classList.add('sign-in')
+        }, 200)
+        </script> 
+</body>
+</html>

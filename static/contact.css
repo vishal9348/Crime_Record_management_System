@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)70%,rgba(0,0,0,0.5)70%), url(https://media.istockphoto.com/photos/the-perfect-setting-to-complete-work-picture-id1251629816?b=1&k=20&m=1251629816&s=170667a&w=0&h=HFCKUXMAXu_gsKwAaVJ5Yfc5CpXhkok4Nu1KigsAXIQ=);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+}
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+.logo{
+    color: #b413e6;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+     float: left;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #b413e6;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 190px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 180px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #b413e6;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.logout{
+  float: right;
+  margin-left: 25vw;
+}
+form{
+  align-items: center;
+  
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #b413e6;
+    border: 2px solid #b413e6;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+ 
+  input[type=submit] {
+    background-color: #b413e6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: rgb(15, 166, 236);
+  }
+  
+  div .container {
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 10px;
+    float: right;
+  }
+  
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+    color: solid white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  #loading{
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    height: 100vh;
+    background: #e4f0f0 url('https://media1.giphy.com/media/xTk9ZvMnbIiIew7IpW/200w.webp?cid=ecf05e47kj52cxru0ow3skg2kulo83w7j2af098f8899ef3o&rid=200w.webp&ct=g')
+    no-repeat center;
+}
+
+.rght{
+  float: right;
+  display: flex;
+  flex-direction: row-reverse;
+  color: #fff;
+}
